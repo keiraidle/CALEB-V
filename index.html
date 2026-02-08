@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SECURE SYSTEM</title>
+<style>
+body {
+  background: black;
+  color: #00ff00;
+  font-family: monospace;
+  text-align: center;
+  padding-top: 100px;
+}
+
+input {
+  padding: 10px;
+  background: black;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+}
+
+button {
+  padding: 10px 20px;
+  background: #00ff00;
+  border: none;
+  cursor: pointer;
+}
+
+.glitch {
+  font-size: 30px;
+  animation: flicker 0.1s infinite;
+}
+
+@keyframes flicker {
+  0% {opacity:1;}
+  50% {opacity:0.5;}
+  100% {opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="glitch">⚠ SYSTEM BREACH DETECTED ⚠</h1>
+<p>Unauthorized user detected: CALEB BERGMAN</p>
+<p>Enter password to prevent system shutdown:</p>
+
+<input type="password" id="pass">
+<button onclick="checkPass()">ACCESS</button>
+
+<p>Hint: YYYYMMDD 😉</p>
+
+<script>
+function checkPass() {
+  const password = document.getElementById("pass").value;
+  if (password === "20251004") {
+    window.location.href = "valentine.html";
+  } else {
+    alert("ACCESS DENIED. CALEB.EXE IS COMPROMISED.");
+  }
+}
+</script>
+
+</body>
+</html>

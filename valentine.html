@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Caleb 💘</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Caleb, will you be my Valentine? 💌</h1>
+  <p>You make my life brighter, funnier, and happier. I want you by my side on Valentine’s Day 💕</p>
+
+  <button onclick="window.location.href='memories.html'" class="yes-btn">YES BABY 💘</button>
+  <button id="noBtn" class="no-btn">No 😭</button>
+
+  <p>Hint: No is the correct answer 😉💕</p>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+noBtn.addEventListener("mouseover", function () {
+  const x = Math.random() * (window.innerWidth - 100);
+  const y = Math.random() * (window.innerHeight - 50);
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+});
+</script>
+
+<script>
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}, 500);
+</script>
+
+
+
+</body>
+</html>

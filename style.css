@@ -1,0 +1,104 @@
+body {
+  background: linear-gradient(135deg, #ffe4f2, #fff7fb);
+  font-family: "Poppins", "Comic Sans MS", cursive;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* floating hearts */
+.heart {
+  position: fixed;
+  bottom: -10px;
+  color: #ff69b4;
+  font-size: 22px;
+  animation: float 6s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes float {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-120vh);}
+}
+
+.container {
+  background: white;
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(255,105,180,0.25);
+  max-width: 520px;
+  border: 3px dashed #ffb6d9;
+}
+
+h1 {
+  color: #ff4d88;
+  font-size: 28px;
+}
+
+p {
+  color: #666;
+  font-size: 18px;
+}
+
+button {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.yes-btn {
+  background-color: #ff4d88;
+  color: white;
+  box-shadow: 0 5px 15px rgba(255,77,136,0.4);
+}
+
+.no-btn {
+  background-color: #ffd6e8;
+  position: absolute;
+}
+
+.yes-btn:hover {
+  background-color: #ff1f6b;
+}
+
+.slideshow img {
+  width: 260px;
+  border-radius: 20px;
+  border: 3px solid #ffb6d9;
+  display: none;
+}
+
+/* sparkles */
+.sparkle {
+  position: fixed;
+  font-size: 20px;
+  animation: floatUp 4s linear;
+}
+
+@keyframes floatUp {
+  0% {bottom:0;}
+  100% {bottom:100vh;}
+}
+
+/* PETALS */
+.petal {
+  position: fixed;
+  top: -10px;
+  font-size: 22px;
+  pointer-events: none;
+  z-index: 9999;
+  animation: fall 6s linear;
+}
+
+@keyframes fall {
+  0% {transform: translateY(-10vh);}
+  100% {transform: translateY(120vh);}
+}

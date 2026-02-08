@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Memories 💞</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+  <h1>Our Cute Memories 💞💖</h1>
+
+  <div class="slideshow">
+    <img class="slides" src="images/photo1.jpg">
+    <img class="slides" src="images/photo2.jpg">
+    <img class="slides" src="images/photo3.jpg">
+    <img class="slides" src="images/photo4.jpg">
+    <img class="slides" src="images/photo5.jpg">
+    <img class="slides" src="images/photo6.jpg">
+    <img class="slides" src="images/photo7.jpg">
+    <img class="slides" src="images/photo8.jpg">
+    <img class="slides" src="images/photo9.jpg">
+    <img class="slides" src="images/photo10.jpg">
+    <img class="slides" src="images/photo11.jpg">
+    <img class="slides" src="images/photo12.jpg">
+    <img class="slides" src="images/photo13.jpg">
+    <img class="slides" src="images/photo14.jpg">
+  </div>
+
+  <p>You are my favorite person, my lover, and my safe place.</p>
+  <button onclick="window.location.href='letter.html'" class="yes-btn">Read My Letter 💌</button>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slides");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); 
+}
+</script>
+
+<script>
+// Sparkles
+setInterval(() => {
+  const s = document.createElement("div");
+  s.className = "sparkle";
+  s.innerHTML = "✨";
+  s.style.left = Math.random()*100 + "vw";
+  document.body.appendChild(s);
+  setTimeout(()=>s.remove(), 4000);
+}, 300);
+</script>
+
+<script>
+// Falling petals
+setInterval(() => {
+  const p = document.createElement("div");
+  p.className = "petal";
+  p.innerHTML = "🌸";
+  p.style.left = Math.random()*100 + "vw";
+  document.body.appendChild(p);
+  setTimeout(()=>p.remove(), 6000);
+}, 500);
+</script>
+
+</body>
+</html>
